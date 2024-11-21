@@ -5,7 +5,7 @@ metadata:
 spec:
   params:
     - name: repository-url
-      value: https://github.com/karthikcsit/Tekton-tutorial
+      value: https://github.com/karthikcsit/Tekton-tutorial.git
     - name: branch
       value: master
       
