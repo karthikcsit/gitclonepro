@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: git-clone-task
+spec:
+  params:
+      - name: repository-url
+        description: The git repo url
+      - name: branch
+        description: the branch for the git repo
+        default: main
+  workspaces:
+      - name: stored-workspace
+  steps:
+      - name: git-clone-repo
+        image: alpine/git
+        script: |
+           #!/bin/sh
+           git clone $(params.repository-url) -b $(params.branch) /workspaces/stored-workspace
