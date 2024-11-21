@@ -1,0 +1,22 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: git-clone-pipeline
+spec:
+  params:
+    - name: repository-url
+      description: the git repo url
+    - name: branch
+      description: the branch for the git repo
+      default: main
+  workspaces:
+    - name: stored-workspace
+  tasks:
+    - name: pipeline-clone-task
+      taskRef:
+        name: git-clone-task
+      params:
+        - name: repository-url
+          value: $(params.repository-url)
+        - name: branch
+          value: $(params.branch)
