@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  name: gitclone-trigger-binding
+spec:
+  params:
+    - name: repository-url
+      value: https://github.com/karthikcsit/Tekton-tutorial
+    - name: branch
+      value: master
+      
