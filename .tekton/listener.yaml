@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: git-clone-listener
+spec:
+  triggers:
+    - name: git-clone-trigger
+      binding:
+        name: gitclone-trigger-binding
+      template:
+        name: gitclone-trigger-template
+        
+
+  
+      
+  
+            
+
+            
