@@ -1,0 +1,28 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: gitclone-trigger-template
+spec:
+  params:
+    - name: repository-url
+      description: The git repo url
+    - name: branch
+      description: the branch for the git repo
+      default: main
+  resourcetemplates:
+    - apiVersion: tekton.dev/v1alpha1
+      kind: PipelineRun
+      metadata:
+        name: gitclone-pipeline-run
+      spec:
+        pipelineRef:
+          name: git-clone-pipeline
+        params:
+          - name: repository-url
+            value: $(params.repository-url)
+          - name: branch
+            value: $(params.branch)
+        workspaces: 
+          - name: stored-workspace
+            persistentVolumeClaim: 
+              claimName: repo-clone-pvc
