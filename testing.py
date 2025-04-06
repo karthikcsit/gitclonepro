@@ -5,10 +5,8 @@ def main():
         print(num)
 
     print("hi")
-    print("inside test")
-    print("inside main")
-
-
+    name = "Karthik"
+    print(name)
 
 
 if __name__ == "__main__":
