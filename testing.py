@@ -5,6 +5,7 @@ def main():
         print(num)
 
     print("hi")
+    print("inside test")
 
 
 
