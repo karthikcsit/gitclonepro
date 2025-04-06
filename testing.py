@@ -6,7 +6,7 @@ def main():
 
     print("hi")
     print("inside test")
-    print("inside main")
+    print("testing")
     print("hey How r you")
 
 
