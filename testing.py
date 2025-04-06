@@ -5,8 +5,8 @@ def main():
         print(num)
 
     print("hi karthik")
-    print("inside test")
-    print("inside main")
+    print("inside my file")
+    print("inside main my file")
     print("hey How r you")
 
 
