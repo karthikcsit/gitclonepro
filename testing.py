@@ -4,6 +4,8 @@ def main():
     for num in numbers:
         print(num)
 
+    print("hi")
+
 
 
 
