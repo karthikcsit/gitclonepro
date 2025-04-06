@@ -4,7 +4,7 @@ def main():
     for num in numbers:
         print(num)
 
-    print("hi")
+    print("hi karthik")
     print("inside test")
     print("inside main")
     print("hey How r you")
